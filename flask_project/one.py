@@ -169,8 +169,8 @@ def customer():
 @app.route('/success',methods = ['POST', 'GET'])  
 def print_data():  
    if request.method == 'POST':  
-      result = request.form  
-      return render_template("result_data.html",result = result)  
+      r = request.form  
+      return render_template("result_data.html",result = r)  
    
 if __name__ == '__main__':  
    app.run(debug = True)  
